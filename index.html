@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital & IA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <header>
+        <h1>Cidadania Digital & IA</h1>
+        <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
+        <button id="toggle-dark-mode">Alternar Modo Escuro</button>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>O que são Deepfakes?</h2>
+            <p>Deepfakes são vídeos, áudios ou imagens manipulados por Inteligência Artificial profunda (Deep Learning). Elas conseguem imitar rostos e vozes de pessoas reais de forma assustadoramente convincente, sendo muito usadas para espalhar desinformação.</p>
+        </section>
+
+        <section class="card">
+            <h2>Como Identificar a Desinformação?</h2>
+            <ul>
+                <li><strong>Pisque os olhos:</strong> Muitas deepfakes antigas ou mal feitas têm dificuldades em simular o piscar de olhos natural.</li>
+                <li><strong>Preste atenção nas bordas:</strong> Desfoques estranhos perto do cabelo, orelhas ou fundo da imagem são sinais de edição por IA.</li>
+                <li><strong>Cheque as fontes:</strong> O conteúdo foi publicado por um portal de notícias confiável? Pesquise antes de compartilhar.</li>
+            </ul>
+        </section>
+
+        <section class="card quiz-section">
+            <h2>Quiz da Verdade: É Fake ou Fato?</h2>
+            <p>Se você receber uma notícia bombástica com um link desconhecido no WhatsApp, o que você faz?</p>
+            <form id="quiz-form">
+                <label>
+                    <input type="radio" name="quiz" value="errado"> Compartilho direto com meus amigos e familiares.
+                </label>
+                <label>
+                    <input type="radio" name="quiz" value="correto"> Não compartilho e procuro em um site de busca confiável.
+                </label>
+                <button type="button" id="btn-checar">Verificar Resposta</button>
+            </form>
+            <p id="quiz-resultado"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto de Educação Digital e IA. Desenvolvido para a Recuperação Prática.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

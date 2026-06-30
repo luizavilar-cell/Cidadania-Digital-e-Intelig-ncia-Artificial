@@ -1,19 +1,21 @@
+/* Paleta de Cores em Tons de Rosa */
 :root {
-    --bg-principal: #fff1f2;     
-    --bg-card: #ffffff;          
-    --texto-principal: #4c0519;  
-    --texto-secundario: #9f1239; 
-    --cor-destaque: #db2777;     
-    --cor-borda: #fbcfe8;        
+    --bg-principal: #fff1f2;     /* Rosa bem claro */
+    --bg-card: #ffffff;          /* Branco para destacar os blocos */
+    --texto-principal: #4c0519;  /* Rosa escuro para leitura confortável */
+    --texto-secundario: #9f1239; /* Rosa médio */
+    --cor-destaque: #db2777;     /* Rosa Choque / Magenta */
+    --cor-borda: #fbcfe8;        /* Rosa bebê para as linhas */
 }
 
+/* Cores do Modo Escuro (Vinho e Rosa Neon) */
 body[data-theme="dark"] {
-    --bg-principal: #1f000a;     
-    --bg-card: #3b0712;          
-    --texto-principal: #ffe4e6;  
-    --texto-secundario: #fda4af; 
-    --cor-destaque: #f472b6;     
-    --cor-borda: #4c0519;        
+    --bg-principal: #1f000a;     /* Fundo vinho escuro */
+    --bg-card: #3b0712;          /* Cards vinho médio */
+    --texto-principal: #ffe4e6;  /* Texto rosa claro */
+    --texto-secundario: #fda4af; /* Texto rosa suave */
+    --cor-destaque: #f472b6;     /* Rosa brilhante */
+    --cor-borda: #4c0519;        /* Bordas escuras */
 }
 
 body {
@@ -97,6 +99,7 @@ li {
     margin-bottom: 10px;
 }
 
+/* Flexbox para alinhar os itens do formulário verticalmente */
 #quiz-form {
     display: flex;
     flex-direction: column;
@@ -138,6 +141,7 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Responsividade para celulares */
 @media (max-width: 600px) {
     header h1 { font-size: 1.8rem; }
     .card { padding: 20px; }

@@ -28,9 +28,9 @@ btnChecar.addEventListener('click', () => {
 
     if (valorResposta === "correto") {
         resultado.textContent = "Parabéns! Você é um cidadão digital consciente. Sempre cheque os fatos. 👍";
-        resultado.style.color = "#16a34a"; 
+        resultado.style.color = "#16a34a"; /* Verde para o acerto */
     } else {
         resultado.textContent = "Cuidado! Compartilhar sem checar espalha desinformação e prejudica a sociedade. ❌";
-        resultado.style.color = "#dc2626"; 
+        resultado.style.color = "#dc2626"; /* Vermelho para o erro */
     }
 });

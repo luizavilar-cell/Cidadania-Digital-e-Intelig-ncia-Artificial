@@ -1,28 +1,21 @@
-/* ==========================================
-   VARIÁVEIS DE CORES - PALETA ROSA
-   ========================================== */
 :root {
-    --bg-principal: #fff1f2;     /* Rosa bem claro */
-    --bg-card: #ffffff;          /* Branco para destacar os cards */
-    --texto-principal: #4c0519;  /* Rosa escuro quase preto para leitura */
-    --texto-secundario: #9f1239; /* Rosa médio */
-    --cor-destaque: #db2777;     /* Rosa Choque / Magenta */
-    --cor-borda: #fbcfe8;        /* Rosa bebê para linhas */
+    --bg-principal: #fff1f2;     
+    --bg-card: #ffffff;          
+    --texto-principal: #4c0519;  
+    --texto-secundario: #9f1239; 
+    --cor-destaque: #db2777;     
+    --cor-borda: #fbcfe8;        
 }
 
-/* Modo Escuro (Mantém a estética com tons de rosa escuro/fúcsia) */
 body[data-theme="dark"] {
-    --bg-principal: #1f000a;     /* Fundo vinho extremamente escuro */
-    --bg-card: #3b0712;          /* Cards vinho escuro */
-    --texto-principal: #ffe4e6;  /* Texto rosa claro */
-    --texto-secundario: #fda4af; /* Texto rosa médio claro */
-    --cor-destaque: #f472b6;     /* Rosa brilhante */
-    --cor-borda: #4c0519;        /* Bordas escuras */
+    --bg-principal: #1f000a;     
+    --bg-card: #3b0712;          
+    --texto-principal: #ffe4e6;  
+    --texto-secundario: #fda4af; 
+    --cor-destaque: #f472b6;     
+    --cor-borda: #4c0519;        
 }
 
-/* ==========================================
-   ESTILIZAÇÃO GLOBAL E LAYOUT
-   ========================================== */
 body {
     background-color: var(--bg-principal);
     color: var(--texto-principal);
@@ -52,15 +45,12 @@ header p {
     font-weight: 500;
 }
 
-/* ==========================================
-   BOTÕES E COMPONENTES
-   ========================================== */
 button {
     background-color: var(--cor-destaque);
     color: #ffffff;
     border: none;
     padding: 12px 24px;
-    border-radius: 20px; /* Bordas arredondadas combinando com a estética */
+    border-radius: 20px; 
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s, opacity 0.2s;
@@ -77,9 +67,6 @@ button:hover {
     width: 100%;
 }
 
-/* ==========================================
-   CONTEÚDO PRINCIPAL (FLEXBOX E GRID)
-   ========================================== */
 main {
     max-width: 700px;
     margin: 40px auto;
@@ -110,7 +97,6 @@ li {
     margin-bottom: 10px;
 }
 
-/* Formulário estruturado com Flexbox */
 #quiz-form {
     display: flex;
     flex-direction: column;
@@ -135,7 +121,7 @@ li {
 
 #quiz-form input[type="radio"] {
     margin-right: 15px;
-    accent-color: var(--cor-destaque); /* Deixa a bolinha do radio rosa */
+    accent-color: var(--cor-destaque); 
 }
 
 #quiz-resultado {
@@ -145,9 +131,6 @@ li {
     font-size: 1.1rem;
 }
 
-/* ==========================================
-   RODAPÉ E RESPONSIVIDADE
-   ========================================== */
 footer {
     text-align: center;
     padding: 30px 20px;

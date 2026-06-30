@@ -1,126 +1,161 @@
-/* Configurações Gerais e Cores (Modo Claro Padrão) */
+/* ==========================================
+   VARIÁVEIS DE CORES - PALETA ROSA
+   ========================================== */
 :root {
-    --bg-color: #f4f7f6;
-    --card-bg: #ffffff;
-    --text-color: #333333;
-    --primary-color: #2a9d8f;
-    --accent-color: #e76f51;
+    --bg-principal: #fff1f2;     /* Rosa bem claro */
+    --bg-card: #ffffff;          /* Branco para destacar os cards */
+    --texto-principal: #4c0519;  /* Rosa escuro quase preto para leitura */
+    --texto-secundario: #9f1239; /* Rosa médio */
+    --cor-destaque: #db2777;     /* Rosa Choque / Magenta */
+    --cor-borda: #fbcfe8;        /* Rosa bebê para linhas */
 }
 
-/* Cores para o Modo Escuro */
-[data-theme="dark"] {
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
-    --text-color: #e0e0e0;
-    --primary-color: #4ade80;
-    --accent-color: #f87171;
+/* Modo Escuro (Mantém a estética com tons de rosa escuro/fúcsia) */
+body[data-theme="dark"] {
+    --bg-principal: #1f000a;     /* Fundo vinho extremamente escuro */
+    --bg-card: #3b0712;          /* Cards vinho escuro */
+    --texto-principal: #ffe4e6;  /* Texto rosa claro */
+    --texto-secundario: #fda4af; /* Texto rosa médio claro */
+    --cor-destaque: #f472b6;     /* Rosa brilhante */
+    --cor-borda: #4c0519;        /* Bordas escuras */
 }
 
+/* ==========================================
+   ESTILIZAÇÃO GLOBAL E LAYOUT
+   ========================================== */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', system-ui, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header com Flexbox */
 header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-header button {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-header button:hover {
-    background-color: white;
-    color: var(--primary-color);
-}
-
-/* Main configurado com Flexbox para os Cards */
-main {
-    display: flex;
-    flex-direction: row; /* Lado a lado no computador */
-    flex-wrap: wrap;     /* Permite quebrar linha se não couber */
-    justify-content: center;
-    gap: 20px;
+    background-color: var(--bg-card);
+    border-bottom: 3px solid var(--cor-destaque);
     padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: center;
 }
 
-/* Estilo dos Cards */
-.card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 20px;
-    flex: 1 1 300px; /* Base de 300px, cresce e encolhe dinamicamente */
-    max-width: 500px;
+header h1 {
+    color: var(--cor-destaque);
+    margin: 0 0 10px 0;
+    font-size: 2.3rem;
 }
 
-.card h2 {
-    color: var(--primary-color);
-    margin-top: 0;
+header p {
+    color: var(--texto-secundario);
+    margin: 0 0 20px 0;
+    font-weight: 500;
 }
 
-/* Formulário do Quiz */
-#quiz-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
+/* ==========================================
+   BOTÕES E COMPONENTES
+   ========================================== */
+button {
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px; /* Bordas arredondadas combinando com a estética */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
 }
 
 #btn-checar {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL (FLEXBOX E GRID)
+   ========================================== */
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(219, 39, 119, 0.05);
+}
+
+.card h2 {
+    color: var(--cor-destaque);
+    margin-top: 0;
+    border-bottom: 2px solid var(--bg-principal);
+    padding-bottom: 8px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Formulário estruturado com Flexbox */
+#quiz-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#quiz-form label {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-principal);
+    border: 1px solid var(--cor-borda);
+    padding: 15px;
+    border-radius: 10px;
     cursor: pointer;
-    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#quiz-form label:hover {
+    background-color: var(--cor-borda);
+}
+
+#quiz-form input[type="radio"] {
+    margin-right: 15px;
+    accent-color: var(--cor-destaque); /* Deixa a bolinha do radio rosa */
 }
 
 #quiz-resultado {
-    margin-top: 15px;
     font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
-/* Footer */
+/* ==========================================
+   RODAPÉ E RESPONSIVIDADE
+   ========================================== */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: #bbb;
-    font-size: 14px;
-    margin-top: 40px;
+    padding: 30px 20px;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
 }
 
-/* RESPONSIVIDADE (Media Query para Celulares) */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column; /* Organiza em coluna nos celulares */
-        align-items: center;
-    }
-    
-    .card {
-        width: 100%; /* Ocupa a largura total da tela do celular */
-    }
+@media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    .card { padding: 20px; }
 }

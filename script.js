@@ -1,7 +1,7 @@
 // 1. Funcionalidade do Modo Escuro
-const tomgleBtn = document.getElementById('toggle-dark-mode');
+const toggleBtn = document.getElementById('toggle-dark-mode');
 
-tomgleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener('click', () => {
     // Verifica qual é o tema atual do body
     const currentTheme = document.body.getAttribute('data-theme');
     
@@ -21,16 +21,19 @@ btnChecar.addEventListener('click', () => {
     const respostaSelecionada = document.querySelector('input[name="quiz"]:checked');
     
     if (!respostaSelecionada) {
-        resultado.textContent = "Por favor, selecione uma opção antes de checar!";
+        resultado.textContent = "Por favor, selecione uma opção antes de checar! ⚠️";
         resultado.style.color = "orange";
         return;
     }
 
-    if (respostaSelecionada.value === "correto") {
+    // Processamento com variáveis conforme critério do Nível 4
+    const valorResposta = respostaSelecionada.value;
+
+    if (valorResposta === "correto") {
         resultado.textContent = "Parabéns! Você é um cidadão digital consciente. Sempre cheque os fatos. 👍";
-        resultado.style.color = "green";
+        resultado.style.color = "#16a34a"; // Verde limpo para o acerto
     } else {
         resultado.textContent = "Cuidado! Compartilhar sem checar espalha desinformação e prejudica a sociedade. ❌";
-        resultado.style.color = "red";
+        resultado.style.color = "#dc2626"; // Vermelho limpo para o erro
     }
 });
